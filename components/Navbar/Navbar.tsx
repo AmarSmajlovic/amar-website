@@ -19,6 +19,7 @@ const NavbarContainer = styled.header`
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 999;
 `;
 
 const Navbar = ({ toggleTheme }: Props) => {
@@ -42,6 +43,7 @@ const Navbar = ({ toggleTheme }: Props) => {
     <NavbarContainer>
       <FlexContainer justifyContent="space-between">
         <Image
+          style={{ cursor: "pointer" }}
           onClick={toggleTheme}
           height={20}
           width={20}
