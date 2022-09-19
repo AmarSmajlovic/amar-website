@@ -41,7 +41,7 @@ const Navbar = ({ toggleTheme }: Props) => {
 
   return (
     <NavbarContainer>
-      <FlexContainer justifyContent="space-between">
+      <FlexContainer full justifyContent="space-between">
         <Image
           style={{ cursor: "pointer" }}
           onClick={toggleTheme}
