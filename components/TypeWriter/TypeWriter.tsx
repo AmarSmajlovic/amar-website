@@ -1,15 +1,15 @@
 import React from "react";
-import { Text } from "../../styles";
 import { Typewriter } from "react-simple-typewriter";
+import { Text } from "@chakra-ui/react";
 
 const TypeWriter = () => {
   return (
-    <Text as="h1" textAlign="center">
+    <Text fontSize="3xl" textAlign="center">
       <Typewriter
         words={[
           "Hello, here is Amar",
           "Guy-who-loves-coffe.tsx",
-          "<ButLovesToCodeMore/>",
+          "But-loves-to-code.tsx",
         ]}
         loop={0}
         cursor
