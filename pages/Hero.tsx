@@ -5,7 +5,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { HeroImageAmar } from "../assets";
 import { SocialIcons, TypeWriter } from "../components";
-import { Flex, Text, Button, Container } from "@chakra-ui/react";
+import { Flex, Text, Button, Container, Box } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const ContainerStyled = styled(Container)`
@@ -27,18 +27,25 @@ const Hero: NextPage = () => {
         gap="10px"
         direction="column"
       >
-        <Image
-          priority
-          quality={100}
-          src={HeroImageAmar}
-          alt="amar-hero-image"
-        />
+        <Box
+          position="relative"
+          width={{ base: 250, md: 300, lg: 350 }}
+          height={{ base: 350, md: 400, lg: 450 }}
+        >
+          <Image
+            layout="fill"
+            priority
+            quality={100}
+            src={HeroImageAmar}
+            alt="amar-hero-image"
+          />
+        </Box>
         <Text textAlign="center" as="i">
           SOFTWARE DEVELOPER
         </Text>
         <TypeWriter />
         <SocialIcons />
-        <Button variant="outline" size="lg" colorScheme="blue">
+        <Button variant="outline" size="md" colorScheme="white">
           GET IN TOUCH
         </Button>
       </Flex>
