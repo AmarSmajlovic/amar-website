@@ -1,5 +1,5 @@
+import { Flex } from "@chakra-ui/react";
 import React from "react";
-import { FlexContainer } from "../../styles";
 import { SocialIcon } from "react-social-icons";
 
 interface Icon {
@@ -16,11 +16,11 @@ const icons: Icon[] = [
 
 const SocialIcons = () => {
   return (
-    <FlexContainer gap="5px">
+    <Flex gap="5px">
       {icons.map((icon) => (
         <SocialIcon fgColor="white" url={icon.url} key={icon.url} />
       ))}
-    </FlexContainer>
+    </Flex>
   );
 };
 

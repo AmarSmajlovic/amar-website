@@ -1,20 +1,16 @@
 import type { AppProps } from "next/app";
-import { ThemeProvider } from "styled-components";
 import { Navbar } from "../components";
-import { Container, GlobalStyle, lightTheme, darkTheme } from "../styles";
-import useDarkMode from "use-dark-mode";
+import { ChakraProvider } from "@chakra-ui/react";
+import GlobalStyle from "../styles/GlobalStyle";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const darkmode = useDarkMode(true);
-
   return (
-    <ThemeProvider theme={darkmode.value ? lightTheme : darkTheme}>
-      <GlobalStyle />
-      <Navbar toggleTheme={darkmode.toggle} />
-      <Container>
+    <ChakraProvider>
+      <GlobalStyle>
+        <Navbar />
         <Component {...pageProps} />
-      </Container>
-    </ThemeProvider>
+      </GlobalStyle>
+    </ChakraProvider>
   );
 }
 

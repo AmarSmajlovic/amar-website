@@ -1,61 +1,43 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import { colors, FlexContainer } from "../../styles";
+import React from "react";
 import { MobMenu } from "../MobMenu";
-import Image from "next/image";
-import { darkThemeIcon, lightThemeIcon } from "../../assets";
-import { useMediaQuery } from "react-responsive";
-import Hamburger from "hamburger-react";
-import useDarkMode from "use-dark-mode";
+import {
+  useColorMode,
+  Flex,
+  Spacer,
+  IconButton,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+import styled from "@emotion/styled";
 
-interface Props {
-  toggleTheme: () => void;
-}
+const Nav = styled(Flex)``;
 
-const NavbarContainer = styled.header`
-  padding: 0.5rem;
-  background-color: gray;
-  height: 50px;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-`;
-
-const Navbar = ({ toggleTheme }: Props) => {
-  const darkmode = useDarkMode();
-  const [toggleMenu, setToggleMenu] = useState<boolean>(false);
-  const isMobile = useMediaQuery({
-    query: "(max-width:768px)",
-  });
-
-  // Need to set this state and useEffect for fixing Hydration render problem.
-  const [isServer, setIsServer] = useState<boolean>(true);
-  useEffect(() => {
-    void setIsServer(false);
-  }, []);
-
-  const handleMenu = () => {
-    setToggleMenu((v) => (v = !v));
-  };
+const Navbar = () => {
+  const { toggleColorMode } = useColorMode();
 
   return (
-    <NavbarContainer>
-      <FlexContainer full justifyContent="space-between">
-        <Image
-          style={{ cursor: "pointer" }}
-          onClick={toggleTheme}
-          height={20}
-          width={20}
-          src={darkmode.value ? darkThemeIcon : lightThemeIcon}
-          alt="theme-icon"
-        />
-        {isMobile && !isServer && (
-          <Hamburger color={colors.white} rounded onToggle={handleMenu} />
-        )}
-        <MobMenu show={toggleMenu} />
-      </FlexContainer>
-    </NavbarContainer>
+    <Nav
+      alignItems="center"
+      as="header"
+      zIndex={1}
+      position="fixed"
+      bg={useColorModeValue("white", "#1a202c")}
+      w="100%"
+      p={4}
+      color="white"
+    >
+      <IconButton
+        variant="outline"
+        colorScheme={useColorModeValue("#1a202c", "white")}
+        color={useColorModeValue("#1a202c", "white")}
+        aria-label="Toggle theme"
+        icon={useColorModeValue(<SunIcon />, <MoonIcon />)}
+        onClick={toggleColorMode}
+      />
+      <Spacer />
+      {/* <HamburgerIcon onClick={handleMenu} /> */}
+      <MobMenu />
+    </Nav>
   );
 };
 

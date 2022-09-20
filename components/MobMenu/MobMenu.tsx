@@ -1,26 +1,37 @@
 import React from "react";
-import styled from "styled-components";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Portal,
+  IconButton,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
-interface Props {
-  show: boolean;
-}
-
-const Container = styled.div<Props>`
-  display: ${({ show }) => (show ? "block" : "none")};
-  width: 90%;
-  height: 400px;
-  background-color: red;
-  border: 1px solid black;
-  position: fixed;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: auto;
-  border-radius: 20px;
-`;
-
-const MobMenu = ({ show }: Props) => {
-  return <Container show={show}>MobMenu</Container>;
+const MobMenu = () => {
+  return (
+    <Menu>
+      <MenuButton as="div">
+        <IconButton
+          variant="outline"
+          colorScheme={useColorModeValue("#1a202c", "white")}
+          color={useColorModeValue("#1a202c", "white")}
+          aria-label="Hamburger-menu"
+          icon={<HamburgerIcon />}
+        />
+      </MenuButton>
+      <Portal>
+        <MenuList>
+          <MenuItem>Menu 1</MenuItem>
+          <MenuItem>New Window</MenuItem>
+          <MenuItem>Open Closed Tab</MenuItem>
+          <MenuItem>Open File</MenuItem>
+        </MenuList>
+      </Portal>
+    </Menu>
+  );
 };
 
 export default MobMenu;
