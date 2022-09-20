@@ -22,12 +22,12 @@ const About: NextPage = () => {
           About
         </Text>
         <Text textAlign="justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quasi
-          optio soluta laboriosam, nostrum sunt? Eveniet iusto quisquam
-          doloribus a reiciendis saepe vero accusamus error similique
-          consequuntur labore magni, laboriosam sed distinctio quas nobis odit
-          repudiandae exercitationem itaque esse. Nulla possimus assumenda quae
-          molestiae ut eveniet. Veniam eaque ad consequatur?
+          I am Software Developer specificied on frontend but also can do
+          backend as well if Company requires. Passionate about creating
+          interactive applications and experiences on the web. I'm open to Job
+          opportunities where I can contribute, learn and grow. If you have a
+          good opportunity that matches my skills and experience then don't
+          hesitate to contact me.
         </Text>
       </Flex>
     </ContainerStyled>
