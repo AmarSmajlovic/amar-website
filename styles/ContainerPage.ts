@@ -3,7 +3,7 @@ import { Container } from '@chakra-ui/react';
 
 export const ContainerPage = styled(Container)`
   padding-top:70px;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   height:100vh;
   
 

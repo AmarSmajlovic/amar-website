@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MobMenu } from "../MobMenu";
 import {
   useColorMode,
@@ -14,6 +14,11 @@ const Nav = styled(Flex)``;
 
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
+  const [isServer, setIsServer] = useState<boolean>(true);
+
+  useEffect(() => {
+    void setIsServer(false);
+  }, []);
 
   return (
     <Nav
@@ -35,8 +40,7 @@ const Navbar = () => {
         onClick={toggleColorMode}
       />
       <Spacer />
-      {/* <HamburgerIcon onClick={handleMenu} /> */}
-      <MobMenu />
+      {!isServer && <MobMenu />}
     </Nav>
   );
 };
