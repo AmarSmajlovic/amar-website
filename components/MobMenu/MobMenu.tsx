@@ -2,13 +2,27 @@ import React from "react";
 import {
   Menu,
   MenuButton,
-  MenuList,
-  MenuItem,
-  Portal,
   IconButton,
   useColorModeValue,
+  Tabs,
+  TabList,
+  Tab,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import Link from "next/link";
+
+interface Link {
+  text: string;
+  url: string;
+}
+
+const links: Link[] = [
+  { text: "Home", url: "#home" },
+  { text: "About", url: "#about" },
+  { text: "Skills", url: "#skills" },
+];
 
 const MobMenu = () => {
   return (
@@ -22,14 +36,17 @@ const MobMenu = () => {
           icon={<HamburgerIcon />}
         />
       </MenuButton>
-      <Portal>
-        <MenuList>
-          <MenuItem>Menu 1</MenuItem>
-          <MenuItem>New Window</MenuItem>
-          <MenuItem>Open Closed Tab</MenuItem>
-          <MenuItem>Open File</MenuItem>
-        </MenuList>
-      </Portal>
+      <MenuList>
+        <Tabs variant="unstyled">
+          <TabList flexDirection="column">
+            {links.map((link) => (
+              <Tab as="a" href={link.url} key={link.url}>
+                <MenuItem justifyContent="center">{link.text}</MenuItem>
+              </Tab>
+            ))}
+          </TabList>
+        </Tabs>
+      </MenuList>
     </Menu>
   );
 };
