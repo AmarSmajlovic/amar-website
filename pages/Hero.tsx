@@ -25,8 +25,8 @@ const Hero: NextPage = () => {
       >
         <Box
           position="relative"
-          width={{ base: 250, md: 300, lg: 350 }}
-          height={{ base: 350, md: 400, lg: 450 }}
+          width={{ base: 300, md: 350, lg: 400 }}
+          height={{ base: 300, md: 350, lg: 400 }}
         >
           <Image
             layout="fill"

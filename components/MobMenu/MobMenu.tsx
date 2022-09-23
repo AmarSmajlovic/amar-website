@@ -9,6 +9,7 @@ import {
   Tab,
   MenuList,
   MenuItem,
+  useColorMode,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Link from "next/link";
@@ -22,16 +23,19 @@ const links: Link[] = [
   { text: "Home", url: "#home" },
   { text: "About", url: "#about" },
   { text: "Skills", url: "#skills" },
+  { text: "Experience", url: "#experience" },
 ];
 
 const MobMenu = () => {
+  const { colorMode } = useColorMode();
+
   return (
     <Menu>
       <MenuButton as="div">
         <IconButton
           variant="outline"
-          colorScheme={useColorModeValue("#1a202c", "white")}
-          color={useColorModeValue("#1a202c", "white")}
+          border="1px solid #E2E8F0"
+          color={useColorModeValue("#1a202c", "E2E8F0")}
           aria-label="Hamburger-menu"
           icon={<HamburgerIcon />}
         />
@@ -40,7 +44,12 @@ const MobMenu = () => {
         <Tabs variant="unstyled">
           <TabList flexDirection="column">
             {links.map((link) => (
-              <Tab as="a" href={link.url} key={link.url}>
+              <Tab
+                color={colorMode == "light" ? "#1a202c" : "white"}
+                as="a"
+                href={link.url}
+                key={link.url}
+              >
                 <MenuItem justifyContent="center">{link.text}</MenuItem>
               </Tab>
             ))}
