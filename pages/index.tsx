@@ -2,6 +2,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import About from "./About";
+import Experience from "./Experience";
 import Hero from "./Hero";
 import Skills from "./Skills";
 
@@ -16,7 +17,7 @@ const Home: NextPage = () => {
       * <Hero />
       <About />
       <Skills />
-      {/* <Experience/> */}
+      <Experience />
       {/* <Projects/> */}
       {/* <Contact/> */}
     </div>
