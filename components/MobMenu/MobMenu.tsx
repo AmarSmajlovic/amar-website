@@ -24,6 +24,7 @@ const links: Link[] = [
   { text: "About", url: "#about" },
   { text: "Skills", url: "#skills" },
   { text: "Experience", url: "#experience" },
+  { text: "Projects", url: "#projects" },
 ];
 
 const MobMenu = () => {
