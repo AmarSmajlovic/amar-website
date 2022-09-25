@@ -1,13 +1,8 @@
+import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
-export interface StaticImageData {
-    src: string;
-    height: number;
-    width: number;
-    blurDataURL?: string;
-}
 
-type TechImage = {
+export type TechImage = {
     image: StaticImageData,
     alt:string
 };
