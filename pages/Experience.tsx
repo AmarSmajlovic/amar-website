@@ -32,7 +32,11 @@ const experiences: ExperienceCardType[] = [
       { image: ReactIcon, alt: "react-icon" },
       { image: TypescriptIcon, alt: "ts-icon" },
     ],
-    description: ["jedan", "jedan", "jedan", "jedan", "jedan"],
+    description: [
+      "Write modern, performant, maintainable code for a diverse array of client and internal projects",
+      "Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React",
+      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis",
+    ],
   },
   {
     companyLogo: (
@@ -51,13 +55,12 @@ const experiences: ExperienceCardType[] = [
       { image: JestJSIcon, alt: "jest-icon" },
     ],
     description: [
-      "Built all front-end projects internally in collaboration with web designers.",
-      "A landing page was made for the company.",
-      "Admin panel and dynamic web app were created from scratch.",
+      "Developed and maintained code for in-house HTML, CSS, JavaScript, ReactJs, Typescript, NextJS, Firebase.",
+      "Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness",
       "Figma design to React converting that is pixel-perfect.",
-      "Creating reusable components, cloud functions in Firebase, and unit tests were also constructed.",
+      "Creating reusable components, cloud functions in Firebase, and unit tests were also constructed using Jest.",
       "Informing clients and investors directly about the status of their applications.",
-      "Learn about the new web development trends, technologies, and standards.",
+      "Learned about the new web development trends, technologies, and standards.",
     ],
   },
 ];
@@ -73,6 +76,9 @@ const Experience: NextPage = () => {
       <Flex direction="column" justifyContent="space-between" gap="10px">
         <Text textAlign="center" fontSize="3xl">
           Experience
+        </Text>
+        <Text as="i" textAlign="center" fontSize={14}>
+          My Journey as Developer
         </Text>
         <Flex
           scrollSnapType="x mandatory"

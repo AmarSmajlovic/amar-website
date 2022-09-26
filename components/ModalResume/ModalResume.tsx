@@ -24,7 +24,7 @@ const ModalResume = () => {
       <Modal closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Amar Smajlovic Resume</ModalHeader>
+          <ModalHeader>{`"It's not a bug, It's a feature!"`}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Image src={ResumeScreenshot} alt="resume-image" />

@@ -1,28 +1,35 @@
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
+import { Text, Flex } from "@chakra-ui/react";
 
 interface Props {
-  src: string | StaticImageData;
+  title?: string;
+  src?: string | StaticImageData;
+  image?: React.ReactNode;
 }
 
-const Skill = ({ src }: Props) => {
+const Skill = ({ title, src, image }: Props) => {
+  const techSkillStyle = {
+    width: "70px",
+    height: "70px",
+    border: !title ? "1px solid #1a202c" : "none",
+    borderRadius: !title ? "50%" : undefined,
+    overflow: "hidden",
+    backgroundColor: !title ? "white" : undefined,
+    display: "flex",
+    justifyContent: "center",
+    padding: !title ? "10px" : undefined,
+  };
+
   return (
-    <motion.div
-      style={{
-        width: "70px",
-        height: "70px",
-        border: "1px solid #1a202c",
-        borderRadius: "50%",
-        overflow: "hidden",
-        backgroundColor: "white",
-        display: "flex",
-        justifyContent: "center",
-        padding: "10px",
-      }}
-    >
-      <Image src={src} alt="html" />
-    </motion.div>
+    <Flex gap="10px" justifyContent="space-between" alignItems="flex-end">
+      {title && <Text>{title}</Text>}
+      <motion.div style={techSkillStyle}>
+        {src && <Image src={src} alt="html" />}
+        {image && image}
+      </motion.div>
+    </Flex>
   );
 };
 

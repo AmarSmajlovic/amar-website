@@ -18,6 +18,9 @@ import {
   ReactIcon,
   TypescriptIcon,
   AngularIcon,
+  ProblemSolvingIcon,
+  CreativeIdeaIcon,
+  HighQualityIcon,
 } from "../assets";
 
 const Skills: NextPage = () => {
@@ -37,6 +40,9 @@ const Skills: NextPage = () => {
           <Text textAlign="center" fontSize="3xl">
             Skills
           </Text>
+          <Text textAlign="center" fontSize={14} as="i">
+            Let's see my skills
+          </Text>
           <Grid placeItems="center" templateColumns="repeat(3, 1fr)" gap="10px">
             <Skill src={HtmlIcon} />
             <Skill src={CssIcon} />
@@ -50,6 +56,14 @@ const Skills: NextPage = () => {
             <Skill src={FirebaseIcon} />
             <Skill src={JestJSIcon} />
           </Grid>
+          <Text textAlign="center" fontSize={14} as="i">
+            Other Skills
+          </Text>
+          <Flex flexDirection="column">
+            <Skill title="Problem Solving" image={<ProblemSolvingIcon />} />
+            <Skill title="Creative Idea" image={<CreativeIdeaIcon />} />
+            <Skill title="High Quality" image={<HighQualityIcon />} />
+          </Flex>
         </Flex>
       </motion.div>
     </ContainerPage>
