@@ -12,10 +12,9 @@ function ExperienceCard({
   return (
     <Box
       minWidth="xs"
-      height="500px"
       borderWidth="1px"
       borderRadius="lg"
-      padding="10px"
+      padding="0 10px 10px 10px"
       scrollSnapAlign="center"
     >
       <Flex flexDirection="column" gap="10px">
@@ -30,7 +29,9 @@ function ExperienceCard({
           </Grid>
           <ul style={{ paddingLeft: "15px" }}>
             {description.map((des) => (
-              <li key={des}>{des}</li>
+              <li key={des}>
+                <Text fontSize={12}>{des}</Text>
+              </li>
             ))}
           </ul>
         </>

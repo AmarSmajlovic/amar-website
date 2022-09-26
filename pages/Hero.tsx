@@ -7,6 +7,9 @@ import { HeroImageAmar } from "../assets";
 import { SocialIcons, TypeWriter } from "../components";
 import { Flex, Text, Button, Box } from "@chakra-ui/react";
 import { ContainerPage } from "../styles/ContainerPage";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Button);
 
 const Hero: NextPage = () => {
   return (
@@ -36,19 +39,23 @@ const Hero: NextPage = () => {
             alt="amar-hero-image"
           />
         </Box>
-        <Text textAlign="center" as="i">
+        <Text fontSize={12} textAlign="center" as="i">
           SOFTWARE DEVELOPER
         </Text>
         <TypeWriter />
         <SocialIcons />
-        <Button
+        <MotionBox
           borderRadius="9999px"
           variant="outline"
           size="md"
           colorScheme="white"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.2 }}
+          whileHover={{ scale: 1.05 }}
         >
           GET IN TOUCH
-        </Button>
+        </MotionBox>
       </Flex>
     </ContainerPage>
   );
