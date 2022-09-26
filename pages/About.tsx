@@ -20,10 +20,11 @@ const About: NextPage = () => {
         <Text textAlign="justify">
           I am Software Developer specificied on frontend but also can do
           backend as well if Company requires. Passionate about creating
-          interactive applications and experiences on the web. I'm open to Job
-          opportunities where I can contribute, learn and grow. If you have a
-          good opportunity that matches my skills and experience then don't
-          hesitate to contact me.
+          interactive applications and experiences on the web. I like to code
+          things from scratch, and enjoy bringing ideas to life in the browser.
+          I'm open to Job opportunities where I can contribute, learn and grow.
+          If you have a good opportunity that matches my skills and experience
+          then don't hesitate to contact me.
         </Text>
       </Flex>
     </ContainerPage>

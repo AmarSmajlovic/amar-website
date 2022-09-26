@@ -36,7 +36,7 @@ const experiences: ExperienceCardType[] = [
   },
   {
     companyLogo: (
-      <Image height="50px" width="170px" src={GotivaIcon} alt="gotiva-icon" />
+      <Image height="40px" width="170px" src={GotivaIcon} alt="gotiva-icon" />
     ),
     role: "Web Developer",
     workDate: "December 2021 - September 2022",
@@ -50,7 +50,15 @@ const experiences: ExperienceCardType[] = [
       { image: FirebaseIcon, alt: "firebase-icon" },
       { image: JestJSIcon, alt: "jest-icon" },
     ],
-    description: ["jedan", "jedan", "jedan", "jedan", "jedan"],
+    description: [
+      "Built all front-end projects internally in collaboration with web designers.",
+      "A landing page was made for the company.",
+      "Admin panel and dynamic web app were created from scratch.",
+      "Figma design to React converting that is pixel-perfect.",
+      "Creating reusable components, cloud functions in Firebase, and unit tests were also constructed.",
+      "Informing clients and investors directly about the status of their applications.",
+      "Learn about the new web development trends, technologies, and standards.",
+    ],
   },
 ];
 

@@ -4,7 +4,7 @@ import { Text } from "@chakra-ui/react";
 
 const TypeWriter = () => {
   return (
-    <Text fontSize="3xl" textAlign="center">
+    <Text fontSize="2xl" textAlign="center">
       <Typewriter
         words={[
           "Hello, here is Amar",
