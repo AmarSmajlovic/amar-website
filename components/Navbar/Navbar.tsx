@@ -36,7 +36,7 @@ const Navbar = () => {
         border="1px solid #E2E8F0"
         color={useColorModeValue("#1a202c", "white")}
         aria-label="Toggle theme"
-        icon={useColorModeValue(<SunIcon />, <MoonIcon />)}
+        icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
         onClick={toggleColorMode}
       />
       <Spacer />

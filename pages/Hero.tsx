@@ -39,8 +39,8 @@ const Hero: NextPage = () => {
             alt="amar-hero-image"
           />
         </Box>
-        <Text fontSize={12} textAlign="center" as="i">
-          SOFTWARE DEVELOPER
+        <Text fontSize={14} textAlign="center" as="i">
+          Software Developer
         </Text>
         <TypeWriter />
         <SocialIcons />

@@ -43,7 +43,7 @@ const projectsData = [
       { alt: "react-icon", image: ReactIcon },
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae mollitia assumenda minima obcaecati quae asperiores, laborum iste vitaererum. Officiis aspernatur minus ipsa deleniti dicta ab laudantium,consectetur non ut illo esse optio asperiores numquam blanditiis enimdoloremque nobis nihil.",
+      "This project is a simplified front end clone of Netflix. It was created with React and CSS. It uses The MovieDB Api to search for movies and display details.",
   },
 ];
 
@@ -59,7 +59,7 @@ const Projects: NextPage = () => {
         <Text textAlign="center" fontSize="3xl">
           Projects
         </Text>
-        <Text as="i" fontSize={12} textAlign="center">
+        <Text as="i" fontSize={14} textAlign="center">
           Some Of My Distinguished Works
         </Text>
         <Flex

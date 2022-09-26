@@ -28,11 +28,23 @@ const ProjectCard = ({
       <Text fontSize="xl" textAlign="center">
         {projectName}
       </Text>
-      <Grid placeItems="center" templateColumns="repeat(6, 1fr)" gap="10px">
+      <Flex
+        flexDirection="row"
+        alignItems="center"
+        flexWrap="wrap"
+        justifyContent="center"
+        gap="10px"
+      >
         {techUsed.map((tech) => (
-          <Image key={tech.alt} src={tech.image} alt={tech.alt} />
+          <Image
+            width="40px"
+            height="40px"
+            key={tech.alt}
+            src={tech.image}
+            alt={tech.alt}
+          />
         ))}
-      </Grid>
+      </Flex>
       <Text textAlign="center">{description}</Text>
     </Flex>
   );

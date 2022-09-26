@@ -9,6 +9,9 @@ import MySQLIcon from './MySQLIcon.svg';
 import NodeJSIcon from './NodeIcon.svg';
 import JestJSIcon from './JestIcon.svg';
 import AngularIcon from './AngularIcon.svg';
+import ProblemSolvingIcon from './ProblemSolvingIcon';
+import HighQualityIcon from './HighQualityIcon';
+import CreativeIdeaIcon from './CreativeIdeaIcon';
 
 export {
     HtmlIcon,
@@ -21,5 +24,8 @@ export {
     MySQLIcon,
     NodeJSIcon,
     JestJSIcon,
-    AngularIcon
+    AngularIcon,
+    ProblemSolvingIcon,
+    HighQualityIcon,
+    CreativeIdeaIcon
 }
