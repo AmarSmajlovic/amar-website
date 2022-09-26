@@ -8,6 +8,7 @@ import FirebaseIcon from './FirebaseIcon.svg';
 import MySQLIcon from './MySQLIcon.svg';
 import NodeJSIcon from './NodeIcon.svg';
 import JestJSIcon from './JestIcon.svg';
+import AngularIcon from './AngularIcon.svg';
 
 export {
     HtmlIcon,
@@ -19,5 +20,6 @@ export {
     FirebaseIcon,
     MySQLIcon,
     NodeJSIcon,
-    JestJSIcon
+    JestJSIcon,
+    AngularIcon
 }

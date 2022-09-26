@@ -20,13 +20,14 @@ const ProjectCard = ({
     <Flex
       flexDirection="column"
       minWidth="xs"
-      height="500px"
       gap="10px"
       padding="10px"
       scrollSnapAlign="center"
     >
       <Image src={projectImage} alt="it-academy" />
-      <Text textAlign="center">E-Commerce Full Stack Website</Text>
+      <Text fontSize="xl" textAlign="center">
+        {projectName}
+      </Text>
       <Grid placeItems="center" templateColumns="repeat(6, 1fr)" gap="10px">
         {techUsed.map((tech) => (
           <Image key={tech.alt} src={tech.image} alt={tech.alt} />

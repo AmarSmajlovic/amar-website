@@ -4,6 +4,7 @@ import Head from "next/head";
 import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import { ContainerPage } from "../styles/ContainerPage";
+import { ModalResume } from "../components";
 
 const About: NextPage = () => {
   return (
@@ -26,6 +27,7 @@ const About: NextPage = () => {
           If you have a good opportunity that matches my skills and experience
           then don't hesitate to contact me.
         </Text>
+        <ModalResume />
       </Flex>
     </ContainerPage>
   );
