@@ -17,6 +17,7 @@ import {
   NodeJSIcon,
   ReactIcon,
   TypescriptIcon,
+  AngularIcon,
 } from "../assets";
 
 const Skills: NextPage = () => {
@@ -41,6 +42,7 @@ const Skills: NextPage = () => {
             <Skill src={CssIcon} />
             <Skill src={JavaScriptIcon} />
             <Skill src={TypescriptIcon} />
+            <Skill src={AngularIcon} />
             <Skill src={ReactIcon} />
             <Skill src={NextJSIcon} />
             <Skill src={NodeJSIcon} />
