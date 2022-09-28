@@ -24,7 +24,7 @@ const Skill = ({ title, src, image }: Props) => {
 
   return (
     <Flex gap="10px" justifyContent="space-between" alignItems="flex-end">
-      {title && <Text>{title}</Text>}
+      {title && <Text pb={2}>{title}</Text>}
       <motion.div style={techSkillStyle}>
         {src && <Image src={src} alt="html" />}
         {image && image}

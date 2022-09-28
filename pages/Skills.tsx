@@ -56,13 +56,10 @@ const Skills: NextPage = () => {
             <Skill src={FirebaseIcon} />
             <Skill src={JestJSIcon} />
           </Grid>
-          <Text textAlign="center" fontSize={14} as="i">
-            Other Skills
-          </Text>
           <Flex flexDirection="column">
-            <Skill title="Problem Solving" image={<ProblemSolvingIcon />} />
-            <Skill title="Creative Idea" image={<CreativeIdeaIcon />} />
-            <Skill title="High Quality" image={<HighQualityIcon />} />
+            <Skill title="1. Problem Solving" image={<ProblemSolvingIcon />} />
+            <Skill title="2. Creative Idea" image={<CreativeIdeaIcon />} />
+            <Skill title="3. High Quality" image={<HighQualityIcon />} />
           </Flex>
         </Flex>
       </motion.div>

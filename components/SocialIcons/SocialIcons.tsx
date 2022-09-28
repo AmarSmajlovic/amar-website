@@ -18,7 +18,12 @@ const SocialIcons = () => {
   return (
     <Flex gap="5px">
       {icons.map((icon) => (
-        <SocialIcon fgColor="white" url={icon.url} key={icon.url} />
+        <SocialIcon
+          fgColor="white"
+          target="_blank"
+          url={icon.url}
+          key={icon.url}
+        />
       ))}
     </Flex>
   );

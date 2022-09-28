@@ -1,10 +1,6 @@
 import React from "react";
 
-interface Props extends React.SVGProps<SVGSVGElement> {
-  center?: boolean;
-}
-
-const HighQualityIcon = ({ center, ...props }: Props) => {
+const HighQualityIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       {...props}

@@ -1,12 +1,9 @@
 import React from "react";
 
-interface Props extends React.SVGProps<SVGSVGElement> {
-  center?: boolean;
-}
-
-const ProblemSolvingIcon = ({ center, ...props }: Props) => {
+const ProblemSolvingIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
+      {...props}
       id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
