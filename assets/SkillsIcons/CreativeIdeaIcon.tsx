@@ -1,12 +1,9 @@
 import React from "react";
 
-interface Props extends React.SVGProps<SVGSVGElement> {
-  center?: boolean;
-}
-
-const CreativeIdeaIcon = ({ center, ...props }: Props) => {
+const CreativeIdeaIcon = ({ ...props }: React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
+      {...props}
       version="1.1"
       id="Layer_1"
       x="0px"

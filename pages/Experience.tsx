@@ -33,9 +33,9 @@ const experiences: ExperienceCardType[] = [
       { image: TypescriptIcon, alt: "ts-icon" },
     ],
     description: [
-      "Write modern, performant, maintainable code for a diverse array of client and internal projects",
-      "Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React",
-      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis",
+      "Write code that is modern, performant, and maintainable for a wide range of client and internal projects.",
+      "Work with a wide range of languages, platforms, frameworks, and content management systems, including JavaScript, TypeScript, and React.",
+      "On a daily basis, communicate with multidisciplinary teams of engineers, designers, producers, and clients.",
     ],
   },
   {
@@ -82,7 +82,7 @@ const Experience: NextPage = () => {
         </Text>
         <Flex
           scrollSnapType="x mandatory"
-          gap="5px"
+          gap="10px"
           width="full"
           overflowX="scroll"
         >

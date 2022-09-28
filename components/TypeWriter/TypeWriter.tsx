@@ -9,7 +9,7 @@ const TypeWriter = () => {
         words={[
           "Hello, here is Amar",
           "Guy-who-loves-coffe.tsx",
-          "But-loves-to-code.tsx",
+          "But-loves-to-code-more.tsx",
         ]}
         loop={0}
         cursor

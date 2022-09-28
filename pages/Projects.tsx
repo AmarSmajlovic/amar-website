@@ -31,7 +31,7 @@ const projectsData = [
       { alt: "mysql-icon", image: MySQLIcon },
     ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae mollitia assumenda minima obcaecati quae asperiores, laborum iste vitaererum. Officiis aspernatur minus ipsa deleniti dicta ab laudantium,consectetur non ut illo esse optio asperiores numquam blanditiis enimdoloremque nobis nihil.",
+      "There is my first complex full-stack web application with many features such as game search, filtering, and sorting, where users can create accounts, login, and purchase games.",
   },
   {
     projectName: "Netflix Clone",

@@ -22,14 +22,14 @@ const About: NextPage = () => {
           Hi, I'm Here To Help Your Next Project
         </Text>
         <Text textAlign="justify">
-          I am Software Developer specificied on building the Front-end of
-          Websites and Web Applications that lead to the success of the overall
-          product also can do some Back-end work if your project requires that.
-          Passionate about creating interactive applications and experiences on
-          the web. I like to code things from scratch and enjoy bringing ideas
-          to life in the browser. I'm open to Job opportunities where I can
-          contribute, learn and grow. If you have an excellent opportunity to
-          match my skills and experience, don't hesitate to contact me.
+          I am a Software Developer who specializes in developing the front-end
+          of websites and web applications that contribute to the overall
+          success of the product. I can also do some back-end work if your
+          project requires it. I am passionate about developing interactive web
+          applications and experiences. I enjoy writing code from scratch and
+          bringing ideas to life in the browser. I'm interested in jobs where I
+          can contribute, learn, and grow. Please contact me if you have an
+          excellent opportunity that matches my skills and experience.
         </Text>
         <ModalResume />
       </Flex>

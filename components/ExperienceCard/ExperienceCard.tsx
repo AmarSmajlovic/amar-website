@@ -11,11 +11,12 @@ function ExperienceCard({
 }: ExperienceCardType) {
   return (
     <Box
-      minWidth="xs"
+      minWidth="full"
       borderWidth="1px"
       borderRadius="lg"
       padding="0 10px 10px 10px"
       scrollSnapAlign="center"
+      h="calc(78vh)"
     >
       <Flex flexDirection="column" gap="10px">
         <>
@@ -25,8 +26,9 @@ function ExperienceCard({
           <Flex
             flexDirection="row"
             alignItems="center"
+            alignContent="flex-start"
             flexWrap="wrap"
-            gap="10px"
+            minHeight="80px"
           >
             {techUsed.map((tech) => (
               <Image
@@ -41,7 +43,7 @@ function ExperienceCard({
           <ul style={{ paddingLeft: "15px" }}>
             {description.map((des) => (
               <li key={des}>
-                <Text fontSize={12}>{des}</Text>
+                <Text fontSize={14}>{des}</Text>
               </li>
             ))}
           </ul>
