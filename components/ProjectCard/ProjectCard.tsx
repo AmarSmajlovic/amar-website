@@ -1,14 +1,15 @@
 import React from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
+import { LinkIcon } from "@chakra-ui/icons";
 import Image, { StaticImageData } from "next/image";
 import { TechImage } from "../../types";
-import { SocialIcon } from "react-social-icons";
 
 interface Props {
   projectName: string;
   projectImage: StaticImageData;
   techUsed: TechImage[];
   description: string;
+  codeUrl: string;
 }
 
 const ProjectCard = ({
@@ -16,6 +17,7 @@ const ProjectCard = ({
   projectImage,
   techUsed,
   description,
+  codeUrl,
 }: Props) => {
   return (
     <Box scrollSnapAlign="center" minWidth="full" minHeight="full">
@@ -51,12 +53,17 @@ const ProjectCard = ({
           ))}
         </Flex>
         <Text textAlign="justify">{description}</Text>
-        <SocialIcon
+        <Flex
+          cursor="pointer"
+          as="a"
+          href={codeUrl}
           target="_blank"
-          style={{ width: "40px", height: "40px" }}
-          fgColor="white"
-          url="https://github.com/AmarSmajlovic/AlfaGaming-website-for-games"
-        />
+          alignItems="center"
+          gap="10px"
+        >
+          <LinkIcon />
+          See Code
+        </Flex>
       </Flex>
     </Box>
   );
