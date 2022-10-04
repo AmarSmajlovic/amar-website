@@ -5,3 +5,5 @@ export * from './Skill';
 export * from './ExperienceCard';
 export * from './ProjectCard';
 export * from './ModalResume';
+export * from './Input';
+export * from './TextArea';

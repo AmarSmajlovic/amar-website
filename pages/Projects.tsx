@@ -32,6 +32,7 @@ const projectsData = [
     ],
     description:
       "There is my first complex full-stack web application with many features such as game search, filtering, and sorting, where users can create accounts, login, and purchase games.",
+    codeUrl: "https://github.com/AmarSmajlovic/AlfaGaming-website-for-games",
   },
   {
     projectName: "Netflix Clone",
@@ -44,6 +45,7 @@ const projectsData = [
     ],
     description:
       "This project is a simplified front end clone of Netflix. It was created with React and CSS. It uses The MovieDB Api to search for movies and display details.",
+    codeUrl: "https://github.com/AmarSmajlovic/Netflix-clone",
   },
 ];
 
@@ -75,6 +77,7 @@ const Projects: NextPage = () => {
               projectName={project.projectName}
               techUsed={project.techUsed}
               description={project.description}
+              codeUrl={project.codeUrl}
             />
           ))}
         </Flex>
