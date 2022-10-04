@@ -2,6 +2,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import About from "./About";
+import ContactMe from "./ContactMe";
 import Experience from "./Experience";
 import Hero from "./Hero";
 import Projects from "./Projects";
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
       <Skills />
       <Experience />
       <Projects />
-      {/* <Contact/> */}
+      <ContactMe />
     </div>
   );
 };
