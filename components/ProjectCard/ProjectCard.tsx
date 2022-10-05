@@ -3,6 +3,9 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import { LinkIcon } from "@chakra-ui/icons";
 import Image, { StaticImageData } from "next/image";
 import { TechImage } from "../../types";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
 
 interface Props {
   projectName: string;
@@ -20,10 +23,17 @@ const ProjectCard = ({
   codeUrl,
 }: Props) => {
   return (
-    <Box scrollSnapAlign="center" minWidth="full" minHeight="full">
+    <MotionBox
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      viewport={{ once: true }}
+      scrollSnapAlign="center"
+      minWidth="full"
+      minHeight="full"
+    >
       <Flex
         flexDirection="column"
-        // gap="10px"
         padding="10px"
         alignItems="center"
         justifyContent="space-around"
@@ -65,7 +75,7 @@ const ProjectCard = ({
           See Code
         </Flex>
       </Flex>
-    </Box>
+    </MotionBox>
   );
 };
 

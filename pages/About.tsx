@@ -5,6 +5,8 @@ import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import { ContainerPage } from "../styles/ContainerPage";
 import { ModalResume } from "../components";
+import { ITAcademyCertification } from "../assets";
+import { ModalShowImage } from "../components/ModalShowImage";
 
 const About: NextPage = () => {
   return (
@@ -31,7 +33,10 @@ const About: NextPage = () => {
           can contribute, learn, and grow. Please contact me if you have an
           excellent opportunity that matches my skills and experience.
         </Text>
-        <ModalResume />
+        <Flex alignItems="center" justifyContent="space-between">
+          <ModalResume />
+          <ModalShowImage image={ITAcademyCertification} />
+        </Flex>
       </Flex>
     </ContainerPage>
   );

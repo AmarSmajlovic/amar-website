@@ -1,15 +1,13 @@
 import React from "react";
 import {
   Modal,
-  ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalFooter,
   ModalBody,
   ModalCloseButton,
   Button,
   useDisclosure,
-  Text,
+  Box,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { ResumeScreenshot } from "../../assets";
@@ -19,22 +17,24 @@ const ModalResume = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Resume</Button>
+      <Box width={100} onClick={onOpen}>
+        <Image src={ResumeScreenshot} alt="image-to-show" />
+      </Box>
 
-      <Modal closeOnOverlayClick={true} isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
+      <Modal
+        size="full"
+        closeOnOverlayClick={true}
+        isOpen={isOpen}
+        onClose={onClose}
+      >
         <ModalContent>
-          <ModalHeader>{`"It's not a bug, It's a feature!"`}</ModalHeader>
-          <ModalCloseButton />
+          <ModalCloseButton zIndex={999} />
           <ModalBody>
-            <Image src={ResumeScreenshot} alt="resume-image" />
+            <Image layout="fill" src={ResumeScreenshot} alt="resume-image" />
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="gray" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button as="a" href="AmarResume.pdf" download variant="ghost">
-              <Text pr={1}>Download</Text> <DownloadIcon />
+            <Button as="a" href="AmarResume.pdf" download variant="link">
+              <DownloadIcon />
             </Button>
           </ModalFooter>
         </ModalContent>

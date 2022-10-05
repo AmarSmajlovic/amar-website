@@ -9,7 +9,10 @@ import { Flex, Text, Button, Box } from "@chakra-ui/react";
 import { ContainerPage } from "../styles/ContainerPage";
 import { motion } from "framer-motion";
 
-const MotionBox = motion(Button);
+const MotionButton = motion(Button);
+
+const TextMotion = motion(Text);
+const MotionBox = motion(Box);
 
 const Hero: NextPage = () => {
   return (
@@ -26,7 +29,11 @@ const Hero: NextPage = () => {
         gap="10px"
         direction="column"
       >
-        <Box
+        <MotionBox
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
           position="relative"
           width={{ base: 300, md: 350, lg: 400 }}
           height={{ base: 300, md: 350, lg: 400 }}
@@ -38,24 +45,29 @@ const Hero: NextPage = () => {
             src={HeroImageAmar}
             alt="amar-hero-image"
           />
-        </Box>
-        <Text fontSize={14} textAlign="center" as="i">
+        </MotionBox>
+        <TextMotion
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          fontSize={14}
+          textAlign="center"
+          as="i"
+        >
           Software Developer
-        </Text>
+        </TextMotion>
         <TypeWriter />
         <SocialIcons />
-        <MotionBox
+        <MotionButton
           borderRadius="9999px"
           variant="outline"
           size="md"
           colorScheme="white"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.2 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.05 }}
         >
           GET IN TOUCH
-        </MotionBox>
+        </MotionButton>
       </Flex>
     </ContainerPage>
   );

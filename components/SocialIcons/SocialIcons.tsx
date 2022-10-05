@@ -1,6 +1,9 @@
-import { Flex } from "@chakra-ui/react";
 import React from "react";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
+
+const MotionDiv = motion(Flex);
 
 interface Icon {
   url: string;
@@ -13,19 +16,33 @@ const icons: Icon[] = [
   { url: "https://www.facebook.com/amar.smajlovic.334" },
   { url: "https://www.instagram.com/smajla_/" },
 ];
-
 const SocialIcons = () => {
+  const bgColor = useColorModeValue("#1a202c", "white");
+  const fgColor = useColorModeValue("white", "#1a202c");
+
   return (
-    <Flex gap="5px">
+    <MotionDiv
+      initial={{ x: -100 }}
+      whileInView={{ x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
+      gap="10px"
+    >
       {icons.map((icon) => (
-        <SocialIcon
-          fgColor="white"
-          target="_blank"
-          url={icon.url}
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
           key={icon.url}
-        />
+        >
+          <SocialIcon
+            bgColor={bgColor}
+            fgColor={fgColor}
+            target="_blank"
+            url={icon.url}
+          />
+        </motion.button>
       ))}
-    </Flex>
+    </MotionDiv>
   );
 };
 
