@@ -2,6 +2,10 @@ import { Box, Center, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import Image from "next/image";
 import { ExperienceCardType } from "../../types";
+import { motion } from "framer-motion";
+
+const MotionBox = motion(Box);
+
 function ExperienceCard({
   companyLogo,
   workDate,
@@ -10,7 +14,11 @@ function ExperienceCard({
   description,
 }: ExperienceCardType) {
   return (
-    <Box
+    <MotionBox
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      viewport={{ once: true }}
       minWidth="full"
       borderWidth="1px"
       borderRadius="lg"
@@ -49,7 +57,7 @@ function ExperienceCard({
           </ul>
         </>
       </Flex>
-    </Box>
+    </MotionBox>
   );
 }
 
