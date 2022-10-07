@@ -17,17 +17,17 @@ const ModalResume = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box width={100} onClick={onOpen}>
+      <Box cursor="pointer" width={[100, 300, 300]} onClick={onOpen}>
         <Image src={ResumeScreenshot} alt="image-to-show" />
       </Box>
 
       <Modal
-        size="full"
+        size={["full", "2xl"]}
         closeOnOverlayClick={true}
         isOpen={isOpen}
         onClose={onClose}
       >
-        <ModalContent>
+        <ModalContent height="100vh">
           <ModalCloseButton zIndex={999} />
           <ModalBody>
             <Image layout="fill" src={ResumeScreenshot} alt="resume-image" />

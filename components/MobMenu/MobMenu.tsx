@@ -6,26 +6,21 @@ import {
   useColorModeValue,
   Tabs,
   TabList,
-  Tab,
   MenuList,
   MenuItem,
   useColorMode,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import Link from "next/link";
+import { Link } from "react-scroll";
+import { LinkType } from "../../types";
 
-interface Link {
-  text: string;
-  url: string;
-}
-
-const links: Link[] = [
-  { text: "Home", url: "#home" },
-  { text: "About", url: "#about" },
-  { text: "Skills", url: "#skills" },
-  { text: "Experience", url: "#experience" },
-  { text: "Projects", url: "#projects" },
-  { text: "Contact", url: "#contact" },
+const links: LinkType[] = [
+  { text: "Home", url: "home" },
+  { text: "About", url: "about" },
+  { text: "Skills", url: "skills" },
+  { text: "Experience", url: "experience" },
+  { text: "Projects", url: "projects" },
+  { text: "Contact", url: "contact" },
 ];
 
 const MobMenu = () => {
@@ -46,14 +41,20 @@ const MobMenu = () => {
         <Tabs variant="unstyled">
           <TabList flexDirection="column">
             {links.map((link) => (
-              <Tab
-                color={colorMode == "light" ? "#1a202c" : "white"}
-                as="a"
-                href={link.url}
-                key={link.url}
+              <MenuItem
+                color={colorMode === "light" ? "#1a202c" : "E2E8F0"}
+                key={link.text}
+                justifyContent="center"
               >
-                <MenuItem justifyContent="center">{link.text}</MenuItem>
-              </Tab>
+                <Link
+                  color="red"
+                  spy={true}
+                  activeClass="activeMob"
+                  to={link.url}
+                >
+                  {link.text}
+                </Link>
+              </MenuItem>
             ))}
           </TabList>
         </Tabs>

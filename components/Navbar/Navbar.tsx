@@ -3,18 +3,23 @@ import { MobMenu } from "../MobMenu";
 import {
   useColorMode,
   Flex,
-  Spacer,
   IconButton,
   useColorModeValue,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import styled from "@emotion/styled";
+import { DesktopMenu } from "../DesktopMenu";
 
 const Nav = styled(Flex)``;
 
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
   const [isServer, setIsServer] = useState<boolean>(true);
+  const menu = useBreakpointValue({
+    base: <MobMenu />,
+    md: <DesktopMenu />,
+  });
 
   useEffect(() => {
     void setIsServer(false);
@@ -24,6 +29,7 @@ const Navbar = () => {
     <Nav
       alignItems="center"
       as="header"
+      justifyContent="space-between"
       zIndex={1}
       position="fixed"
       bg={useColorModeValue("white", "#1a202c")}
@@ -39,8 +45,7 @@ const Navbar = () => {
         icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
         onClick={toggleColorMode}
       />
-      <Spacer />
-      {!isServer && <MobMenu />}
+      {!isServer && menu}
     </Nav>
   );
 };

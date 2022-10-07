@@ -12,7 +12,7 @@ const TypeWriter = () => {
       viewport={{ once: true }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      fontSize="2xl"
+      fontSize={["2xl", "3xl", "5xl"]}
       textAlign="center"
     >
       <Typewriter
