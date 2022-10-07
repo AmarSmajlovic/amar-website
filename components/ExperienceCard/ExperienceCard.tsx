@@ -19,7 +19,8 @@ function ExperienceCard({
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      minWidth="full"
+      minWidth={["full", "full", "350px", "450px"]}
+      w={["full", "full", "250px", "350px"]}
       borderWidth="1px"
       borderRadius="lg"
       padding="0 10px 10px 10px"

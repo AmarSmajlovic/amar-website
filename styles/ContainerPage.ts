@@ -5,6 +5,6 @@ export const ContainerPage = styled(Container)`
   padding-top:70px;
   scroll-snap-align: start;
   height:100vh;
-  
+  scroll-snap-stop:always;
 
 `;

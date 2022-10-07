@@ -30,7 +30,6 @@ const ProjectCard = ({
       viewport={{ once: true }}
       scrollSnapAlign="center"
       minWidth="full"
-      minHeight="full"
     >
       <Flex
         flexDirection="column"

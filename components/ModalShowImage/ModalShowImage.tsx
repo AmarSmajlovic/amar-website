@@ -17,25 +17,20 @@ const ModalShowImage = ({ image }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box width={100} onClick={onOpen}>
+      <Box cursor="pointer" width={[100, 300, 300]} onClick={onOpen}>
         <Image src={image} alt="image-to-show" />
       </Box>
 
       <Modal
-        size="full"
+        size={["full", "2xl"]}
         closeOnOverlayClick={true}
         isOpen={isOpen}
         onClose={onClose}
       >
-        <ModalContent bg="rgba(44,62,80,0)">
+        <ModalContent height="100vh" boxShadow="none" bg="rgba(44,62,80,0)">
           <ModalCloseButton zIndex={999} />
           <ModalBody>
-            <Image
-              style={{ filter: "drop-shadow(20px 15px 20px #000)" }}
-              layout="fill"
-              src={image}
-              alt="full-size-image"
-            />
+            <Image layout="fill" src={image} alt="full-size-image" />
           </ModalBody>
         </ModalContent>
       </Modal>

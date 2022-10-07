@@ -1,0 +1,8 @@
+.active{
+    color:var(--chakra-colors-blue-300);
+    border-bottom: 2px solid currentColor;
+}
+
+.activeMob{
+    color:var(--chakra-colors-blue-300);
+}
