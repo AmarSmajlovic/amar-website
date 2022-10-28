@@ -26,7 +26,7 @@ const Hero: NextPage = () => {
       </Head>
       <Flex
         height="100%"
-        justifyContent={["center", "center", "space-around"]}
+        justifyContent={["center", "center", "center"]}
         alignItems="center"
         gap="10px"
         direction={["column", "column", "row-reverse"]}
@@ -38,8 +38,8 @@ const Hero: NextPage = () => {
             transition={{ duration: 0.3 }}
             viewport={{ once: true }}
             position="relative"
-            width={[300, 450, 600]}
-            height={[300, 450, 600]}
+            width={[300, 450, 700]}
+            height={[300, 450, 700]}
           >
             <Image
               layout="fill"
