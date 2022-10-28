@@ -12,14 +12,22 @@ import {
 import Image from "next/image";
 import { ResumeScreenshot } from "../../assets";
 import { DownloadIcon } from "@chakra-ui/icons";
+import styled from "@emotion/styled";
+
+const StyledBox = styled(Box)`
+  &:hover {
+    transform: scale(1.05);
+    transition: 0.5s all;
+  }
+`;
 
 const ModalResume = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <>
-      <Box cursor="pointer" width={[100, 300, 300]} onClick={onOpen}>
+    <Box>
+      <StyledBox cursor="pointer" width={[100, 300, 300]} onClick={onOpen}>
         <Image src={ResumeScreenshot} alt="image-to-show" />
-      </Box>
+      </StyledBox>
 
       <Modal
         size={["full", "2xl"]}
@@ -39,7 +47,7 @@ const ModalResume = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Box>
   );
 };
 
