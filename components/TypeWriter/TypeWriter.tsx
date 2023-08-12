@@ -12,21 +12,21 @@ const TypeWriter = () => {
       viewport={{ once: true }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
-      fontSize={["2xl", "3xl", "5xl"]}
+      fontSize={["small", "2xl"]}
       textAlign="center"
     >
       <Typewriter
         words={[
-          "Hello, here is Amar",
-          "Guy-who-loves-coffe.tsx",
-          "But-loves-to-code-more.tsx",
+          "crafting-delightful-user-experiences.ts",
+          "passionate-about-frontend-development.tsx",
+          "bringing-ideas-to-life-with-code.tsx",
         ]}
         loop={0}
         cursor
         cursorColor="red"
         cursorStyle="|"
-        typeSpeed={150}
-        deleteSpeed={50}
+        typeSpeed={250}
+        deleteSpeed={100}
         delaySpeed={1000}
       />
     </MotionText>

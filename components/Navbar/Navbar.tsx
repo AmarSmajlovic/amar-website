@@ -36,6 +36,11 @@ const Navbar = () => {
       w="100%"
       p={4}
       color="white"
+      paddingInline="50px"
+      boxShadow={`0 0 10px ${useColorModeValue(
+        "rgba(0, 0, 0, 0.09)",
+        "rgba(130, 130, 130, 0.09)"
+      )}`}
     >
       <IconButton
         variant="outline"

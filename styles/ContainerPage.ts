@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
-import { Container } from '@chakra-ui/react';
+import { Container, theme } from "@chakra-ui/react";
 
 export const ContainerPage = styled(Container)`
-  padding-top:70px;
+  padding-top: 100px;
   scroll-snap-align: start;
-  height:100vh;
-  scroll-snap-stop:always;
-
+  height: 100vh;
+  scroll-snap-stop: always;
+  max-width: ${theme.sizes["6xl"]};
 `;

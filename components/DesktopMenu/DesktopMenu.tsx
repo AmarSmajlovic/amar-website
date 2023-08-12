@@ -9,6 +9,12 @@ const StyledLink = styled(Link)`
   padding-top: 3px;
   padding-bottom: 3px;
   cursor: pointer;
+  border-bottom: none !important;
+  transition: 200ms all;
+  &.active {
+    color: red;
+    font-weight: 600;
+  }
 `;
 
 const links: LinkType[] = [
@@ -25,7 +31,7 @@ const DesktopMenu = () => {
 
   return (
     <Tabs>
-      <TabList fontSize="lg" gap="15px" color={color}>
+      <TabList border="none" fontSize="lg" gap="15px" color={color}>
         {links.map((link) => (
           <StyledLink spy={true} key={link.url} to={link.url}>
             {link.text}
