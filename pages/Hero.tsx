@@ -78,7 +78,7 @@ const Hero: NextPage = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 whileHover={{ scale: 1.05 }}
               >
-                GET IN TOUCH
+                GET IN TOUCHH
               </MotionButton>
             </Link>
           </Flex>
