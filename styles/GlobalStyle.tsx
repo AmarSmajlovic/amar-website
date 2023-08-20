@@ -24,8 +24,8 @@ const GlobalStyle = ({ children }: Props) => {
               sans-serif;
           }
           html {
-            overflow: scroll;
-            scroll-snap-type: y mandatory;
+            /* overflow: scroll; */
+            /* scroll-snap-type: y mandatory; */
           }
         `}
       />

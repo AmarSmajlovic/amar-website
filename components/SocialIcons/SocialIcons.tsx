@@ -21,16 +21,14 @@ const SocialIcons = () => {
   const fgColor = useColorModeValue("white", "#1a202c");
 
   return (
-    <MotionDiv
-      initial={{ x: -100 }}
-      whileInView={{ x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3 }}
-      gap="10px"
-    >
-      {icons.map((icon) => (
+    <MotionDiv gap="10px">
+      {icons.map((icon, i) => (
         <motion.button
+          initial={{ y: -50 }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true }}
           whileHover={{ scale: 1.1 }}
+          transition={{ duration: `0.${i + 3}` }}
           whileTap={{ scale: 0.9 }}
           key={icon.url}
         >

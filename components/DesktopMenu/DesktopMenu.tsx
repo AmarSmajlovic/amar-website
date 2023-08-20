@@ -33,7 +33,14 @@ const DesktopMenu = () => {
     <Tabs>
       <TabList border="none" fontSize="lg" gap="15px" color={color}>
         {links.map((link) => (
-          <StyledLink spy={true} key={link.url} to={link.url}>
+          <StyledLink
+            smooth
+            duration={200}
+            ignoreCancelEvents
+            spy={true}
+            key={link.url}
+            to={link.url}
+          >
             {link.text}
           </StyledLink>
         ))}
