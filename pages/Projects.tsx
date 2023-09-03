@@ -16,6 +16,8 @@ import {
 import { ITAcademyProject, NetflixClone } from "../assets";
 import { ProjectCard } from "../components";
 import { ContainerPage } from "../styles/ContainerPage";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper/modules";
 
 const projectsData = [
   {
@@ -64,23 +66,26 @@ const Projects: NextPage = () => {
         <Text as="i" fontSize={14} textAlign="center">
           Some Of My Distinguished Works
         </Text>
-        <Flex
-          scrollSnapType="x mandatory"
-          gap="10px"
-          width="full"
-          overflowX="scroll"
+        <Swiper
+          pagination={{
+            dynamicBullets: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
         >
           {projectsData.map((project) => (
-            <ProjectCard
-              key={project.projectName}
-              projectImage={project.projectImage}
-              projectName={project.projectName}
-              techUsed={project.techUsed}
-              description={project.description}
-              codeUrl={project.codeUrl}
-            />
+            <SwiperSlide key={project.projectName}>
+              <ProjectCard
+                key={project.projectName}
+                projectImage={project.projectImage}
+                projectName={project.projectName}
+                techUsed={project.techUsed}
+                description={project.description}
+                codeUrl={project.codeUrl}
+              />
+            </SwiperSlide>
           ))}
-        </Flex>
+        </Swiper>
       </Flex>
     </ContainerPage>
   );

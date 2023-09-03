@@ -19,44 +19,41 @@ function ExperienceCard({
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       viewport={{ once: true }}
-      minWidth={["full", "full", "350px", "450px"]}
-      w={["full", "full", "250px", "350px"]}
+      flex={1}
       borderWidth="1px"
       borderRadius="lg"
-      padding="0 10px 10px 10px"
+      padding="20px"
       scrollSnapAlign="center"
-      h="calc(78vh)"
+      minWidth="300px"
     >
       <Flex flexDirection="column" gap="10px">
-        <>
-          <Center height={70}>{companyLogo}</Center>
-          <Text>{role}</Text>
-          <Text>{workDate}</Text>
-          <Flex
-            flexDirection="row"
-            alignItems="center"
-            alignContent="flex-start"
-            flexWrap="wrap"
-            minHeight="80px"
-          >
-            {techUsed.map((tech) => (
-              <Image
-                width="40px"
-                height="40px"
-                key={tech.alt}
-                src={tech.image}
-                alt={tech.alt}
-              />
-            ))}
-          </Flex>
-          <ul style={{ paddingLeft: "15px" }}>
-            {description.map((des) => (
-              <li key={des}>
-                <Text fontSize={14}>{des}</Text>
-              </li>
-            ))}
-          </ul>
-        </>
+        <Center height={70}>{companyLogo}</Center>
+        <Text>{role}</Text>
+        <Text>{workDate}</Text>
+        <Flex
+          flexDirection="row"
+          alignItems="center"
+          alignContent="flex-start"
+          flexWrap="wrap"
+          minHeight="80px"
+        >
+          {techUsed.map((tech) => (
+            <Image
+              width="40px"
+              height="40px"
+              key={tech.alt}
+              src={tech.image}
+              alt={tech.alt}
+            />
+          ))}
+        </Flex>
+        <ul style={{ paddingLeft: "15px" }}>
+          {description.map((des) => (
+            <li key={des}>
+              <Text fontSize={14}>{des}</Text>
+            </li>
+          ))}
+        </ul>
       </Flex>
     </MotionBox>
   );

@@ -35,6 +35,7 @@ const Navbar = () => {
       bg={useColorModeValue("white", "#1a202c")}
       w="100%"
       p={4}
+      style={{ zIndex: "9999" }}
       color="white"
       paddingInline="50px"
       boxShadow={`0 0 10px ${useColorModeValue(

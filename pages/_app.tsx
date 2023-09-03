@@ -3,6 +3,9 @@ import { Navbar } from "../components";
 import { ChakraProvider } from "@chakra-ui/react";
 import GlobalStyle from "../styles/GlobalStyle";
 import "../styles/styles.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
