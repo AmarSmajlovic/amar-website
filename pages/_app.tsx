@@ -6,6 +6,7 @@ import "../styles/styles.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-cards";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

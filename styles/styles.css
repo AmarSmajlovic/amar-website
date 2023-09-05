@@ -29,3 +29,27 @@
     object-fit: cover;
   }
   
+  .swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+    color: red;
+}
+
+.swiper-pagination-bullet-active{
+  background:red !important;
+}
+
+  .cards-swiper {
+    width: 100%;
+    height: 700px;
+    max-width: 500px;
+  }
+  
+  .next{
+    color:red !important;
+  }
+  .cards-swiper-slide {
+    border-radius: 18px;
+    border: 2px solid red;
+  
+  }
+
