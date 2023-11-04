@@ -25,10 +25,10 @@ const Hero: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Flex
-        height="100%"
         justifyContent={["center", "center", "center"]}
         alignItems="center"
         gap="10px"
+        height="90vh"
         direction={["column", "column", "row-reverse"]}
       >
         <Flex
@@ -45,6 +45,7 @@ const Hero: NextPage = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             position="relative"
+            minHeight="50vh"
             maxWidth={["400px", "500px"]}
             margin="auto"
             height="100%"
