@@ -53,8 +53,8 @@ const ProjectCard = ({
         >
           {techUsed.map((tech) => (
             <Image
-              width="40px"
-              height="40px"
+              width={40}
+              height={40}
               key={tech.alt}
               src={tech.image}
               alt={tech.alt}
