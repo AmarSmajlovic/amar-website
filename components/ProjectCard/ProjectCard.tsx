@@ -40,7 +40,14 @@ const ProjectCard = ({
         minWidth="full"
         h="calc(78vh)"
       >
-        <Image src={projectImage} alt="it-academy" />
+        <Box height="50%" width="100%" position="relative">
+          <Image
+            layout="fill"
+            objectFit="contain"
+            src={projectImage}
+            alt="it-academy"
+          />
+        </Box>
         <Text fontSize="xl" textAlign="center">
           {projectName}
         </Text>
@@ -52,13 +59,9 @@ const ProjectCard = ({
           justifyContent="center"
         >
           {techUsed.map((tech) => (
-            <Image
-              width={40}
-              height={40}
-              key={tech.alt}
-              src={tech.image}
-              alt={tech.alt}
-            />
+            <Box key={tech.alt} height="40px" width="40px" position="relative">
+              <Image fill objectFit="cover" src={tech.image} alt={tech.alt} />
+            </Box>
           ))}
         </Flex>
         <Text textAlign="justify">{description}</Text>
