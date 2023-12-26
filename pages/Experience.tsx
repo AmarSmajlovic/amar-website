@@ -2,7 +2,7 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import React from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { ContainerPage } from "../styles/ContainerPage";
 import { ExperienceCard } from "../components";
 import { ExperienceCardType } from "../types";
@@ -42,7 +42,9 @@ const experiences: ExperienceCardType[] = [
   },
   {
     companyLogo: (
-      <Image height="40px" width="220px" src={GotivaIcon} alt="gotiva-icon" />
+      <Box height="40px" width="220px">
+        <Image src={GotivaIcon} alt="gotiva-icon" />
+      </Box>
     ),
     role: "Web Developer",
     workDate: "December 2021 - September 2022",
